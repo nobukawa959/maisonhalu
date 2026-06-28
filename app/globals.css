@@ -1,0 +1,236 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================
+   Google Fonts Import
+   ============================ */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap');
+
+/* ============================
+   CSS カスタムプロパティ（変数）
+   ============================ */
+:root {
+  --color-black: #0A0A0F;
+  --color-white: #FFFFFF;
+  --color-silver: #C0C0C0;
+  --color-silver-light: #E8E8E8;
+  --color-accent: #7DD3F7;
+  --color-accent-bright: #38BDF8;
+
+  /* ガラスモーフィズム */
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.12);
+  --glass-blur: 16px;
+}
+
+/* ============================
+   ベーススタイル
+   ============================ */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  font-family: 'Noto Sans JP', sans-serif;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ============================
+   ガラスモーフィズム ユーティリティ
+   ============================ */
+@layer utilities {
+  .glass {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .glass-dark {
+    background: rgba(10, 10, 15, 0.7);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .glass-accent {
+    background: rgba(125, 211, 247, 0.06);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(125, 211, 247, 0.2);
+  }
+
+  /* テキストグラデーション — シルバーベース */
+  .text-gradient {
+    background: linear-gradient(135deg, #888888 0%, #C8C8C8 50%, #E8E8E8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-accent {
+    background: linear-gradient(135deg, #7DD3F7 0%, #38BDF8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* スクロールアニメーション用（初期状態）*/
+  .reveal {
+    opacity: 0;
+    transform: translateY(2rem);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .reveal-left {
+    opacity: 0;
+    transform: translateX(-2rem);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+
+  .reveal-left.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .reveal-right {
+    opacity: 0;
+    transform: translateX(2rem);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+
+  .reveal-right.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  /* 遅延クラス */
+  .delay-100 { transition-delay: 100ms; }
+  .delay-200 { transition-delay: 200ms; }
+  .delay-300 { transition-delay: 300ms; }
+  .delay-400 { transition-delay: 400ms; }
+  .delay-500 { transition-delay: 500ms; }
+}
+
+/* ============================
+   セクション共通スタイル
+   ============================ */
+.section-title {
+  font-family: 'Noto Serif JP', serif;
+  font-weight: 300;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+}
+
+/* ============================
+   スクロールバーカスタマイズ
+   ============================ */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-black);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-silver);
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent);
+}
+
+/* ============================
+   リンクスタイル リセット
+   ============================ */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ============================
+   画像スタイル
+   ============================ */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ============================
+   フォーカススタイル（アクセシビリティ）
+   ============================ */
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* ============================
+   Google Map 埋め込みスタイル
+   ============================ */
+.map-container iframe {
+  filter: grayscale(30%) contrast(1.1);
+}
+
+/* スクロールライン */
+@keyframes scroll-line {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(200%); }
+}
+.animate-scroll-line {
+  animation: scroll-line 1.8s ease-in-out infinite;
+}
+
+/* セクション reveal アニメーション強化 */
+.reveal,
+.reveal-left,
+.reveal-right {
+  opacity: 0;
+  transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1), transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal { transform: translateY(32px); }
+.reveal-left { transform: translateX(-40px); }
+.reveal-right { transform: translateX(40px); }
+.reveal.visible,
+.reveal-left.visible,
+.reveal-right.visible {
+  opacity: 1;
+  transform: translate(0);
+}
+
+/* テキストグロー */
+.text-glow {
+  text-shadow: 0 0 30px rgba(125, 211, 247, 0.3);
+}
+
+/* ホバー光沢ライン */
+@keyframes shine {
+  from { transform: translateX(-100%) skewX(-20deg); }
+  to { transform: translateX(200%) skewX(-20deg); }
+}
+.shine-on-hover:hover::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.25), transparent);
+  transform: skewX(-20deg);
+  animation: shine 0.6s ease forwards;
+}
