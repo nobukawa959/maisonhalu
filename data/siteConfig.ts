@@ -16,7 +16,7 @@ export const siteConfig = {
   },
   googleMap: {
     embedUrl: "https://www.google.com/maps?q=Maison+HALU+広島県広島市中区袋町7-32&z=17&output=embed",
-    reviewUrl: "https://search.google.com/local/writereview?cid=14630259296356372304",
+    reviewUrl: "https://www.google.com/maps/place/Maison+HALU/@34.3915683,132.4609717,17z",
     placeUrl: "https://www.google.com/maps/place/Maison+HALU/@34.3915683,132.4609717,17z",
   },
   // ========================
