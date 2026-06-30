@@ -15,9 +15,9 @@ export const siteConfig = {
     url: "https://www.tiktok.com/@maison.halu",
   },
   googleMap: {
-    embedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3294.8!2d132.459!3d34.393!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzTCsDIzJzM1LjAiTiAxMzLCsDI3JzMyLjAiRQ!5e0!3m2!1sja!2sjp!4v1234567890",
-    reviewUrl: "https://g.page/r/PLACEHOLDER/review",
-    placeUrl: "https://maps.google.com/?cid=PLACEHOLDER",
+    embedUrl: "https://www.google.com/maps?q=Maison+HALU+広島県広島市中区袋町7-32&z=17&output=embed",
+    reviewUrl: "https://search.google.com/local/writereview?cid=14630259296356372304",
+    placeUrl: "https://www.google.com/maps/place/Maison+HALU/@34.3915683,132.4609717,17z",
   },
   // ========================
   // GA4・Clarity 設定場所
