@@ -26,7 +26,7 @@ export const siteConfig = {
   // Microsoft Clarity: https://clarity.microsoft.com/ でIDを取得
   analytics: {
     ga4Id: "G-XXXXXXXXXX", // ← ここにGA4のMeasurement IDを入れてください
-    clarityId: "XXXXXXXXXX", // ← ここにClarityのProject IDを入れてください
+    clarityId: "xf1vt17cv6",
   },
   seo: {
     title: "MAISON HALU | 広島・袋町の韓国ヘア・レイヤーカット・髪質改善専門美容院",

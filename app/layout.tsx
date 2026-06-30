@@ -142,7 +142,7 @@ export default function RootLayout({
             2. プロジェクトを作成してProject IDを取得
             3. data/siteConfig.ts の analytics.clarityId に設定
             ============================ */}
-        {siteConfig.analytics.clarityId !== 'XXXXXXXXXX' && (
+        {(siteConfig.analytics.clarityId as string) !== 'XXXXXXXXXX' && (
           <script
             dangerouslySetInnerHTML={{
               __html: `
