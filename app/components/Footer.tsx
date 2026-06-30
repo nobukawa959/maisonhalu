@@ -2,13 +2,15 @@ import { siteConfig } from '@/data/siteConfig'
 
 // フッターナビ
 const footerLinks = [
-  { label: 'コンセプト', href: '#concept' },
-  { label: 'メニュー', href: '#menu' },
-  { label: 'ヘアスタイル', href: '#hairstyle' },
-  { label: 'スタイリスト', href: '#stylist' },
-  { label: '口コミ', href: '#reviews' },
-  { label: 'アクセス', href: '#access' },
-  { label: 'お問い合わせ', href: '#contact' },
+  { label: 'コンセプト', href: '/#concept' },
+  { label: 'メニュー', href: '/#menu' },
+  { label: 'ヘアスタイル', href: '/#hairstyle' },
+  { label: 'スタイリスト', href: '/#stylist' },
+  { label: '口コミ', href: '/#reviews' },
+  { label: 'よくある質問', href: '/#faq' },
+  { label: 'アクセス', href: '/#access' },
+  { label: 'お問い合わせ', href: '/#contact' },
+  { label: '採用情報', href: '/recruit' },
 ]
 
 export default function Footer() {

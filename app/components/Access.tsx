@@ -24,7 +24,7 @@ const accessInfo = [
   {
     icon: '🕐',
     label: '営業時間',
-    value: 'カウンセリング予約制（Instagramにてご確認ください）',
+    value: siteConfig.hours,
   },
 ]
 

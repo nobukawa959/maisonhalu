@@ -12,6 +12,7 @@ import HairStyle from './components/HairStyle'
 import Stylist from './components/Stylist'
 import Reviews from './components/Reviews'
 import SNSSection from './components/SNSSection'
+import FAQ from './components/FAQ'
 import Access from './components/Access'
 import Contact from './components/Contact'
 import FloatingCTA from './components/FloatingCTA'
@@ -44,6 +45,9 @@ export default function Home() {
 
         {/* Instagram / TikTok */}
         <SNSSection />
+
+        {/* よくあるご質問 */}
+        <FAQ />
 
         {/* アクセス・Google Map */}
         <Access />
