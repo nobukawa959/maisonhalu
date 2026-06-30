@@ -114,7 +114,7 @@ export default function RootLayout({
             2. プロパティを作成してMeasurement IDを取得
             3. data/siteConfig.ts の analytics.ga4Id に設定
             ============================ */}
-        {siteConfig.analytics.ga4Id !== 'G-XXXXXXXXXX' && (
+        {(siteConfig.analytics.ga4Id as string) !== 'G-XXXXXXXXXX' && (
           <>
             <script
               async

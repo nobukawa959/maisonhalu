@@ -25,7 +25,7 @@ export const siteConfig = {
   // Google Analytics 4: https://analytics.google.com/ でIDを取得
   // Microsoft Clarity: https://clarity.microsoft.com/ でIDを取得
   analytics: {
-    ga4Id: "G-XXXXXXXXXX", // ← ここにGA4のMeasurement IDを入れてください
+    ga4Id: "G-6FCSY4NWLX",
     clarityId: "xf1vt17cv6",
   },
   seo: {
