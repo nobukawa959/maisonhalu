@@ -3,9 +3,16 @@ export const menuCategories = [
     category: "Cut",
     items: [
       {
-        name: "レイヤーカット + トリートメント",
+        name: "似合わせカット & SSトリートメント",
         price: "¥5,500 —",
-        description: "カットなし / トリートメントのみのご希望も承ります",
+        description: "高校生以下限定。骨格に合わせた似合わせカットとトリートメントのセット",
+        couponId: "CP00000010006392",
+      },
+      {
+        name: "前髪・顔周りカット & コテ巻きアレンジ",
+        price: "¥4,400 —",
+        description: "印象を左右する前髪・顔周りを丁寧にカットし、コテ巻きで仕上げます",
+        couponId: "CP00000010022946",
       },
     ],
   },
@@ -13,15 +20,28 @@ export const menuCategories = [
     category: "Color",
     items: [
       {
-        name: "艶髪カラー + トリートメント",
-        price: "¥12,100 —",
-        description: "光を受けるたびに輝く、ツヤと透明感を両立したカラー",
+        name: "BAYKARTE 髪質改善カラー",
+        price: "¥13,500 —",
+        description: "髪に潤いとまとまりを与える、口コミ限定の髪質改善カラー",
+        couponId: "CP00000011169777",
       },
       {
-        name: "ライトニング W カラー",
+        name: "ライトニング W カラー & カット",
         price: "¥23,500 —",
-        description: "髪へのダメージを極限に抑えたトーンアップカラー",
+        description: "髪へのダメージを極限に抑えたトーンアップカラーとカットのセット",
         couponId: "CP00000010572701",
+      },
+      {
+        name: "似合わせカット & ケアカラー & 選べる髪質改善トリートメント",
+        price: "¥14,400 —",
+        description: "カット・カラー・トリートメントを自分好みに組み合わせられるセットメニュー",
+        couponId: "CP00000010572717",
+      },
+      {
+        name: "カラー & 3Step 艶髪トリートメント",
+        price: "¥11,000 —",
+        description: "迷ったらこれ。カラーと3段階トリートメントで艶髪に",
+        couponId: "CP00000011026176",
       },
     ],
   },
@@ -29,10 +49,16 @@ export const menuCategories = [
     category: "Treatment",
     items: [
       {
-        name: "ケラチントリートメント",
+        name: "高濃度ケラチントリートメント",
         price: "¥16,000 —",
-        description: "縮毛矯正なしでまとまる髪へ。毎朝のスタイリングが格段に楽になる髪質改善の決定版",
+        description: "縮毛矯正なしでまとまる髪へ。本物の髪質改善を叶える高濃度ケラチントリートメント",
         couponId: "CP00000010730908",
+      },
+      {
+        name: "BYKARTE トリートメント & 似合わせカット",
+        price: "¥8,800 —",
+        description: "全国でも取り扱い数が少ないBYKARTEトリートメントと似合わせカットのセット",
+        couponId: "CP00000010006344",
       },
     ],
   },
