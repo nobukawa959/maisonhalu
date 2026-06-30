@@ -14,6 +14,12 @@ export const menuCategories = [
         description: "印象を左右する前髪・顔周りを丁寧にカットし、コテ巻きで仕上げます",
         couponId: "CP00000010022946",
       },
+      {
+        name: "BYKARTE トリートメント & 似合わせカット",
+        price: "¥8,800 —",
+        description: "全国でも取り扱い数が少ないBYKARTEトリートメントと似合わせカットのセット",
+        couponId: "CP00000010006344",
+      },
     ],
   },
   {
@@ -53,12 +59,6 @@ export const menuCategories = [
         price: "¥16,000 —",
         description: "縮毛矯正なしでまとまる髪へ。本物の髪質改善を叶える高濃度ケラチントリートメント",
         couponId: "CP00000010730908",
-      },
-      {
-        name: "BYKARTE トリートメント & 似合わせカット",
-        price: "¥8,800 —",
-        description: "全国でも取り扱い数が少ないBYKARTEトリートメントと似合わせカットのセット",
-        couponId: "CP00000010006344",
       },
     ],
   },
