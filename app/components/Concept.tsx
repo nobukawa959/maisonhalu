@@ -6,8 +6,8 @@ import { useEffect, useRef } from 'react'
 const strengths = [
   {
     icon: '—',
-    title: 'ワンホンレイヤーカット',
-    titleEn: 'Korean Layer Cut',
+    title: 'トレンドレイヤーカット',
+    titleEn: 'Trend Layer Cut',
     description:
       '韓国トレンドを取り入れた繊細なレイヤーカット。骨格と髪質を見極めながら、動くたびに美しいフォルムを作り出します。',
   },
