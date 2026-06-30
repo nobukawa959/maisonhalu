@@ -60,28 +60,38 @@ export default function Menu() {
 
               {/* メニューアイテム */}
               <div className="glass rounded-2xl overflow-hidden border border-white/10">
-                {category.items.map((item, itemIndex) => (
-                  <div
-                    key={item.name}
-                    className={`group flex items-center justify-between px-6 py-5 hover:bg-white/5 transition-colors duration-300 ${
-                      itemIndex !== category.items.length - 1
-                        ? 'border-b border-white/5'
-                        : ''
-                    }`}
-                  >
-                    <div className="flex-1">
-                      <p className="font-medium text-[#E8E8E8] tracking-wide group-hover:text-[#7DD3F7] transition-colors duration-300">
-                        {item.name}
+                {category.items.map((item, itemIndex) => {
+                  const couponId = (item as any).couponId as string | undefined
+                  const href = couponId
+                    ? `https://beauty.hotpepper.jp/CSP/bt/reserve/?storeId=H000311760&couponId=${couponId}&add=2&addMenu=0&rootCd=10`
+                    : 'https://beauty.hotpepper.jp/CSP/bt/reserve/?storeId=H000311760&add=1&addMenu=1&rootCd=10'
+
+                  return (
+                    <a
+                      key={item.name}
+                      href={href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`group flex items-center justify-between px-6 py-5 hover:bg-white/5 transition-colors duration-300 ${
+                        itemIndex !== category.items.length - 1
+                          ? 'border-b border-white/5'
+                          : ''
+                      }`}
+                    >
+                      <div className="flex-1">
+                        <p className="font-medium text-[#E8E8E8] tracking-wide group-hover:text-[#7DD3F7] transition-colors duration-300">
+                          {item.name}
+                        </p>
+                        {item.description && (
+                          <p className="text-xs text-[#C0C0C0]/60 mt-1">{item.description}</p>
+                        )}
+                      </div>
+                      <p className="font-serif text-lg text-[#C0C0C0] ml-6 whitespace-nowrap">
+                        {item.price}
                       </p>
-                      {item.description && (
-                        <p className="text-xs text-[#C0C0C0]/60 mt-1">{item.description}</p>
-                      )}
-                    </div>
-                    <p className="font-serif text-lg text-[#C0C0C0] ml-6 whitespace-nowrap">
-                      {item.price}
-                    </p>
-                  </div>
-                ))}
+                    </a>
+                  )
+                })}
               </div>
             </div>
           ))}
