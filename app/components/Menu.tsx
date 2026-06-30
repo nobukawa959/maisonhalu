@@ -99,7 +99,7 @@ export default function Menu() {
         {/* 予約CTAボタン */}
         <div className="reveal text-center mt-10">
           <a
-            href="https://www.instagram.com/maison.halu"
+            href="https://beauty.hotpepper.jp/CSP/bt/reserve/?storeId=H000311760&add=1&addMenu=1&rootCd=10"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block px-10 py-4 rounded-full text-sm tracking-[0.2em] font-medium transition-all duration-300 hover:scale-105 hover:-translate-y-0.5"
@@ -108,7 +108,7 @@ export default function Menu() {
               color: '#0A0A0F',
             }}
           >
-            Instagram DM で予約する
+            メニューを選んで予約する
           </a>
         </div>
       </div>
