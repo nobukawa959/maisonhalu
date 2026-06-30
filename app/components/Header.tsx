@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import { useRouter, usePathname } from 'next/navigation'
 import { siteConfig } from '@/data/siteConfig'
 
 // ナビゲーションリンク定義
@@ -15,6 +16,8 @@ const navLinks = [
 export default function Header() {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
+  const router = useRouter()
+  const pathname = usePathname()
 
   // スクロール検知：透明 → ガラスモーフィズム
   useEffect(() => {
@@ -38,6 +41,10 @@ export default function Header() {
   const handleNavClick = (href: string) => {
     setMenuOpen(false)
     if (href.startsWith('#')) {
+      if (pathname !== '/') {
+        router.push(`/${href}`)
+        return
+      }
       const el = document.querySelector(href)
       el?.scrollIntoView({ behavior: 'smooth' })
     }
@@ -56,9 +63,14 @@ export default function Header() {
           <div className="flex items-center justify-between h-16 md:h-20">
             {/* ロゴ */}
             <a
-              href="#"
+              href="/"
               className="font-serif font-light tracking-[0.3em] text-lg md:text-xl text-gradient hover:opacity-80 transition-opacity"
-              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+              onClick={(e) => {
+                if (pathname === '/') {
+                  e.preventDefault()
+                  window.scrollTo({ top: 0, behavior: 'smooth' })
+                }
+              }}
             >
               MAISON HALU
             </a>
