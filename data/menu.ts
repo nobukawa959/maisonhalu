@@ -45,7 +45,7 @@ export const menuCategories = [
       },
       {
         name: "カラー & 3Step 艶髪トリートメント",
-        price: "¥11,000 —",
+        price: "¥12,000 —",
         description: "迷ったらこれ。カラーと3段階トリートメントで艶髪に",
         couponId: "CP00000011026176",
       },
